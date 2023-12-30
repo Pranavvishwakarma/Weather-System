@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+      
+            <h2 class="location">
+                <i class="fas fa-street-view" style="color:#773333;">Your Country: {%location%}</i>
+            </h2>
+        <div class="login-form">
+
+            <p id="date">WED|OCT23|10:49</p>
+            <h1 class="temp">{%tempVal%}</h1>
+            <h2 class="tempmin_mac">{%temp_min%} | {%temp_max%}</h2>
+        </div>
+    
+</div>
+       </div> 
+    
+</body>
+<script>
+    const curDate=document.getElementById("date");
+    const day=()=>{
+      const week=new Array(7);
+      week[0]="sunday";
+      week[1]="Monday";
+      week[2]="Tuesday";
+      week[3]="wednesday";
+      week[4]="friday";
+      week[5]="suniwar";
+      week[6]="satarday";
+      let currentday=new Date();
+      const t=week[currentday.getDay()];
+     return `${t}`;
+
+    }
+    const formonth=()=>{
+        const months=[
+            "jan",
+            "feb",
+            "march",
+            "April",
+            "May",
+            "jun",
+            "july",
+            "augast",
+            "sep",
+            "oct",
+            "nav",
+            "Dec",
+        ];
+        var now=new Date();
+        var month=months[now.getMonth()];
+    
+        var date=now.getDate()
+        let hours=now.getHours();
+        let mins=now.getMinutes();
+        
+        let perios="AM";
+
+        if(hours>11){
+            perios="PM";
+            if(hours>12) hours-=12;
+        }
+        if(mins<10){
+            mins="0"+mins;
+        }
+
+    //    document.write(month+" "+" "+date+""+" "+hours);
+       return `${month} ${date} | ${hours}:${mins}${perios}`
+        
+    };
+    
+   day();
+    curDate.innerHTML=day()+" | "+formonth();
+    
+</script>
+</html>
