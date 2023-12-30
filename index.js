@@ -16,11 +16,11 @@ const replaceVal=(tempVal,OrgVal)=>{
     temperature=temperature.replace("{%temp_max%}",OrgVal.main.temp_max)
     return temperature;
 }
-// 85d051013894598fa521d062bd17a09c
+
 
 const server=http.createServer((req,res)=>{
     if(req.url=="/"){
-        request("https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=28c6707f6d96c63bbaa918e00b8d7aa5"
+        request("https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=" //Enter Your API key 
         )
         .on("data",(chunk)=>{
             const objdata=JSON.parse(chunk)
