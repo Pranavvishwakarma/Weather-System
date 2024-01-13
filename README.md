@@ -1,8 +1,8 @@
 # Real-Time Weather System
 
-Welcome to the Real-Time Weather System repository! This project is designed to provide users with up-to-date weather information using HTML, CSS, and JavaScript. The application offers an intuitive and visually appealing interface for users to effortlessly access real-time weather data for their desired locations. Leveraging the power of HTML for structure, CSS for styling, and JavaScript for dynamic interactions, this weather system ensures a seamless user experience.
+Welcome to the Real-Time Weather System repository! This project is designed to provide users with up-to-date weather information using HTML, CSS, JavaScript, and Node.js. The application offers an intuitive and visually appealing interface for users to effortlessly access real-time weather data for their desired locations. Leveraging the power of HTML for structure, CSS for styling, JavaScript for dynamic interactions, and Node.js for server-side functionality, this weather system ensures a seamless user experience.
 
-
+![Real-Time Weather System Demo](link-to-demo-gif)
 
 ## Features
 
@@ -22,11 +22,27 @@ To get started with the Real-Time Weather System, follow these steps:
     git clone https://github.com/your-username/real-time-weather-system.git
     ```
 
-2. Open the `index.html` file in your preferred web browser.
+2. Navigate to the project directory:
 
-3. For API integration, obtain an API key from [OpenWeatherMap](https://openweathermap.org/api) and replace the placeholder in the JavaScript code with your key.
+    ```bash
+    cd real-time-weather-system
+    ```
 
+3. Install Node.js dependencies:
 
+    ```bash
+    npm install
+    ```
+
+4. Start the Node.js server:
+
+    ```bash
+    npm start
+    ```
+
+5. Open your web browser and go to `http://localhost:3000` to view the application.
+
+6. For API integration, obtain an API key from [OpenWeatherMap](https://openweathermap.org/api) and replace the placeholder in the JavaScript code with your key.
 
 ```javascript
 const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
